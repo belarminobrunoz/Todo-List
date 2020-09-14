@@ -1,7 +1,10 @@
+var nome = prompt("Qual é seu nome?");
+console.log(nome);
+
 const app = new Vue({
     el: "#app",
     data: {
-        title: "Olá Bruno Souza!",
+        title: "Olá " + nome + "! 💡",
         newTodo: "",
         todos: []
     },
@@ -24,6 +27,11 @@ const app = new Vue({
         allDone() {
             this.todos.forEach(todo => {
                 todo.done = true;
+            });
+        },
+        allNotDone() {
+            this.todos.forEach(todo => {
+                todo.done = false;
             });
         }
 

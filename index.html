@@ -4,13 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://ez-css.now.sh">
-    <style>
-        .done {
-            text-decoration: line-through;
-        }
-    </style>
+    <title>To-do App</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -19,11 +15,12 @@
 
         <form @submit.prevent="addTodo">
             <label for="newTodo">New Todo</label>
-            <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="">
+            <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="" placeholder="Ex.: Wash the dishes">
             <button type="submit" name="button">Add</button>
-
         </form>
-        <button @click="allDone" type="button" name="button">All done</button>
+
+        <button @click="allDone" type="button" name="button">Marcar todos como feito</button>
+        <button @click="allNotDone" type="button" name="button">Todos não realizados</button>
         <ul>
             <li v-for="todo in todos">
                 <input type="checkbox" v-model="todo.done">

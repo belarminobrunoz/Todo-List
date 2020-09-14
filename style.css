@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+    background-color: rgb(206, 253, 156);
+    padding: 0 25%;
+}
+
+form {
+    padding: 15px;
+    text-decoration: none;
+}
+
+.done {
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+ul {
+    list-style-type: none;
+}
