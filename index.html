@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do App</title>
+
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+
+
 
 </head>
 
 <body>
     <main id="app">
-        <h3>{{title}}</h3>
+        <h1>{{title}}</h1>
 
         <form @submit.prevent="addTodo" class="formulario">
             <label for="newTodo">New Todo</label>
@@ -24,14 +28,14 @@
 
 
         <ul>
-            <li v-for="todo in todos">
+            <li v-for="todo in todos" class="itens">
                 <table>
                     <tr>
-                        <td>
+                        <td class="checkbox">
                             <input type="checkbox" v-model="todo.done">
                         </td>
                         <td class="titulo-da-tarefa">
-                            <span :class="{done: todo.done}">{{todo.title}}</span>
+                            <span :class="{done: todo.done}" class="tarefa">{{todo.title}}</span>
                         </td>
                         <td class="botao-remove">
                             <button @click="removeTodo(todo)" type="button">Remove</button>
@@ -40,11 +44,6 @@
                 </table>
             </li>
         </ul>
-
-
-
-
-
     </main>
 
 

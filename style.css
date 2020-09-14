@@ -16,14 +16,32 @@ form {
 
 ul {
     list-style-type: none;
+    margin-top: 5%;
+    border: solid rgb(0, 238, 255);
 }
 
 li {
     padding: 10px;
+    border: solid black;
 }
 
 td {
-    width: 500px;
+    border: solid rgb(255, 0, 0);
+}
+
+.checkbox {
+    width: max-content;
+}
+
+.botao-remove {
+    width: max-content;
+    text-align: right;
+}
+
+.titulo-da-tarefa {
+    width: 100%;
+    word-break: break-all;
+    padding: 10px;
 }
 
 button {
@@ -38,6 +56,11 @@ button {
 
 button:hover {
     background: black;
+}
+
+.itens:nth-child(2n) {
+    background: rgb(142, 175, 107);
+    color: #FFFFFF;
 }
 
 input {
