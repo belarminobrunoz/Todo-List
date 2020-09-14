@@ -4,6 +4,36 @@ body {
     padding: 0 25%;
 }
 
+header {
+    margin: 5%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#newTodo {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 10px;
+}
+
+.bt-add {
+    padding: 5px 15px;
+    border-radius: 2px;
+    margin: 20px 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.bt-add:hover {
+    background: rgb(69, 116, 0);
+    transform: scale(1.2);
+    transition: 0.1s;
+}
+
+.botoes-superiores {
+    margin-top: 20px;
+}
+
 form {
     padding-bottom: 25px;
     text-decoration: none;
@@ -17,31 +47,31 @@ form {
 ul {
     list-style-type: none;
     margin-top: 5%;
-    border: solid rgb(0, 238, 255);
 }
 
 li {
     padding: 10px;
-    border: solid black;
 }
 
-td {
-    border: solid rgb(255, 0, 0);
-}
-
-.checkbox {
+.td-checkbox {
     width: max-content;
 }
 
-.botao-remove {
+.td-botao-remove {
     width: max-content;
     text-align: right;
 }
 
-.titulo-da-tarefa {
+.td-titulo-da-tarefa {
     width: 100%;
     word-break: break-all;
     padding: 10px;
+}
+
+.botao-remove:hover {
+    background: rgb(179, 3, 3);
+    transform: scale(1.1);
+    transition: 0.1s;
 }
 
 button {

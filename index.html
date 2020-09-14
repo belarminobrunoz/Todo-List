@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do App</title>
 
-    <link rel="stylesheet" href="reset.css">
+
     <link rel="stylesheet" href="style.css">
 
 
@@ -15,30 +15,31 @@
 
 <body>
     <main id="app">
-        <h1>{{title}}</h1>
-
+        <header>
+            <h1>{{title}}</h1>
+        </header>
         <form @submit.prevent="addTodo" class="formulario">
             <label for="newTodo">New Todo</label>
             <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="" placeholder="Ex.: Wash the dishes">
-            <button type="submit" name="button">Add</button>
+            <button type="submit" name="button" class="bt-add">Add</button>
         </form>
 
-        <button @click="allDone" type="button" name="button">Marcar todos como feito</button>
-        <button @click="allNotDone" type="button" name="button">Todos não realizados</button>
+        <button @click="allDone" type="button" name="button" class="botoes-superiores">Marcar todos como feito</button>
+        <button @click="allNotDone" type="button" name="button" class="botoes-superiores">Todos não realizados</button>
 
 
         <ul>
             <li v-for="todo in todos" class="itens">
                 <table>
                     <tr>
-                        <td class="checkbox">
+                        <td class="td-checkbox">
                             <input type="checkbox" v-model="todo.done">
                         </td>
-                        <td class="titulo-da-tarefa">
+                        <td class="td-titulo-da-tarefa">
                             <span :class="{done: todo.done}" class="tarefa">{{todo.title}}</span>
                         </td>
-                        <td class="botao-remove">
-                            <button @click="removeTodo(todo)" type="button">Remove</button>
+                        <td class="td-botao-remove">
+                            <button @click="removeTodo(todo)" type="button" class="botao-remove">Remove</button>
                         </td>
                     </tr>
                 </table>
