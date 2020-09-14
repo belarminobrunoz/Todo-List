@@ -13,7 +13,7 @@
     <main id="app">
         <h3>{{title}}</h3>
 
-        <form @submit.prevent="addTodo">
+        <form @submit.prevent="addTodo" class="formulario">
             <label for="newTodo">New Todo</label>
             <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="" placeholder="Ex.: Wash the dishes">
             <button type="submit" name="button">Add</button>
@@ -21,11 +21,23 @@
 
         <button @click="allDone" type="button" name="button">Marcar todos como feito</button>
         <button @click="allNotDone" type="button" name="button">Todos não realizados</button>
+
+
         <ul>
             <li v-for="todo in todos">
-                <input type="checkbox" v-model="todo.done">
-                <span :class="{done: todo.done}">{{todo.title}}</span>
-                <button @click="removeTodo(todo)" type="button">Remove</button>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" v-model="todo.done">
+                        </td>
+                        <td class="titulo-da-tarefa">
+                            <span :class="{done: todo.done}">{{todo.title}}</span>
+                        </td>
+                        <td class="botao-remove">
+                            <button @click="removeTodo(todo)" type="button">Remove</button>
+                        </td>
+                    </tr>
+                </table>
             </li>
         </ul>
 

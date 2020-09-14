@@ -5,7 +5,7 @@ body {
 }
 
 form {
-    padding: 15px;
+    padding-bottom: 25px;
     text-decoration: none;
 }
 
@@ -16,4 +16,32 @@ form {
 
 ul {
     list-style-type: none;
+}
+
+li {
+    padding: 10px;
+}
+
+td {
+    width: 500px
+}
+
+button {
+    border-radius: 2px;
+    border: none;
+    background: orange;
+    color: white;
+    cursor: pointer;
+    padding: 2px 20px;
+    transition: 1s;
+}
+
+button:hover {
+    background: black;
+}
+
+input {
+    border-radius: 2px;
+    border: none;
+    padding: 5px;
 }
