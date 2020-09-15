@@ -109,3 +109,28 @@ input {
     border: none;
     padding: 5px;
 }
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+    .label-todo {
+        text-align: center;
+        margin: 25%;
+    }
+    #newTodo {
+        margin: 10px auto;
+    }
+    .bt-add {
+        width: auto;
+        padding: 15px 25%;
+    }
+    .botoes-superiores {
+        transform: scale(1.2);
+    }
+    .td-titulo-da-tarefa {
+        width: 100%;
+        word-break: normal;
+        padding: 10px;
+    }
+}

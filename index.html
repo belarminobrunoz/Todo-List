@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="./task.ico" type="image/x-icon" />
 
 
 
@@ -20,8 +21,10 @@
             <h1>{{title}}</h1>
         </header>
         <form @submit.prevent="addTodo" class="formulario">
-            <label for="newTodo">Nova tarefa</label>
+            <label for="newTodo" class="label-todo">Nova tarefa</label>
+
             <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="" placeholder="Ex.: Lavar a louça">
+
             <button type="submit" name="button" class="bt-add">Adicionar</button>
         </form>
 
