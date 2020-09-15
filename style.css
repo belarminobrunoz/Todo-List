@@ -127,6 +127,7 @@ input {
     }
     .botoes-superiores {
         transform: scale(1.2);
+        margin: 20px;
     }
     .td-titulo-da-tarefa {
         width: 100%;
