@@ -8,6 +8,7 @@
 
 
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
 
 
 
@@ -19,9 +20,9 @@
             <h1>{{title}}</h1>
         </header>
         <form @submit.prevent="addTodo" class="formulario">
-            <label for="newTodo">New Todo</label>
-            <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="" placeholder="Ex.: Wash the dishes">
-            <button type="submit" name="button" class="bt-add">Add</button>
+            <label for="newTodo">Nova tarefa</label>
+            <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="" placeholder="Ex.: Lavar a louça">
+            <button type="submit" name="button" class="bt-add">Adicionar</button>
         </form>
 
         <button @click="allDone" type="button" name="button" class="botoes-superiores">Marcar todos como feito</button>
@@ -39,7 +40,7 @@
                             <span :class="{done: todo.done}" class="tarefa">{{todo.title}}</span>
                         </td>
                         <td class="td-botao-remove">
-                            <button @click="removeTodo(todo)" type="button" class="botao-remove">Remove</button>
+                            <button @click="removeTodo(todo)" type="button" class="botao-remove">Remover</button>
                         </td>
                     </tr>
                 </table>
